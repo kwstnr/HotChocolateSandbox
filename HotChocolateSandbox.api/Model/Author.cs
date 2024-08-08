@@ -15,6 +15,7 @@ public sealed class Author
     
     private Author(string name)
     {
+        Id = Guid.NewGuid();
         Name = name;
     }
     

@@ -7,6 +7,9 @@ builder.Services.AddDbContextPool<HotChocolateSandboxDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));
 
 builder.Services
+    .AddMigration<HotChocolateSandboxDbContext, HotChocolateSandboxSeed>();
+
+builder.Services
     .AddGraphQLServer()
     .AddTypes();
 

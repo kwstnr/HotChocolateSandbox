@@ -16,6 +16,7 @@ public class Book
 
     private Book(string title, Author author)
     {
+        Id = Guid.NewGuid();
         Title = title;
         Author = author;
     }
