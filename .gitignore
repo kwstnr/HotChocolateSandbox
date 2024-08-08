@@ -1,0 +1,74 @@
+# .NET related
+bin/
+obj/
+**/*.user
+**/*.rsuser
+**/*.suo
+**/*.userosscache
+**/*.sln.docstates
+.vscode/
+
+# Rider related
+.idea/
+
+# Visual Studio Code related
+.vscode/
+
+# Node.js related
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+*.log.*
+
+# HotChocolate related
+HotChocolate/
+
+# PostgreSQL related
+*.sql
+pgdata/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Configuration files
+appsettings*.json
+secret.json
+
+# Environment variables
+.env
+.env.*
+
+# Backup files
+*.bak
+*.swp
+
+# Others
+*.pyc
+*.pyo
+*.class
+*.jar
+*.war
+*.ear
+*.db
+*.sqlite
+*.sqlite3
+*.pdb
+*.mdb
+*.accdb
+*.tar.gz
+*.gz
+*.zip
+*.7z
+*.rar
+*.bak
+*.tmp
+
+# Project files
+*.project
+*.classpath
