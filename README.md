@@ -21,7 +21,8 @@ Alternatively it can be defined per resolver using `[Service(ServiceKind.Synchro
 this creates a pool of DbContexts that are reused. When different GraphQL Resolvers inject a DbContext at the same time, different Instances of DbContexts are injected and execute operations.
 
 ### Limitations
-A problem arises (what we have seen in our projects) is when different services track the same entities within different Instances of the same DbContext.
+A problem arises (what we have seen in our projects) is when different services track the same entities within different Instances of the same DbContext. However I wasn't able to reproduce this.
+I tried to with the `UpdateBook` mutation, but was unsuccessful. Maybe it will only arise when using a ContextFactory. More Testing will tell.
 
 ## AddDbContext
 `builder.Services.AddDbContext<HotChocolateSandboxDbContext>(o =>

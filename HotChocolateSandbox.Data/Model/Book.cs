@@ -6,8 +6,8 @@ public class Book
 {
     [Key]
     public Guid Id { get; init; }
-    public string Title { get; private set; }
-    public Author Author { get; private set; }
+    public string Title { get; set; }
+    public Author Author { get; set; }
     public Guid AuthorId { get; private set; }
 
     private Book()

@@ -1,5 +1,6 @@
 using HotChocolateSandbox.AddPooledDbContext.Seed;
 using HotChocolateSandbox.AddPooledDbContext.Service;
+using HotChocolateSandbox.AddPooledDbContext.Service.TrackingIssues;
 using Microsoft.EntityFrameworkCore;
 using HotChocolateSandboxDbContext = HotChocolateSandbox.AddPooledDbContext.Data.HotChocolateSandboxDbContext;
 
@@ -12,7 +13,9 @@ builder.Services.AddMigration<HotChocolateSandboxDbContext, HotChocolateSandboxS
 
 builder.Services
     .AddScoped<BookService>()
-    .AddScoped<AuthorService>();
+    .AddScoped<AuthorService>()
+    .AddScoped<ChangeBookAuthorService>()
+    .AddScoped<ChangeBookTitleService>();
 
 builder.Services
     .AddGraphQLServer()

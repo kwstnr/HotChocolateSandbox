@@ -10,4 +10,8 @@ public class BookService(HotChocolateSandboxDbContext context)
     {
         return await context.Books.ToListAsync();
     }
+
+    
+    public async Task<Book?> GetBookByIdAsync(Guid id)
+        => await context.Books.FirstOrDefaultAsync(b => b.Id == id);
 }
