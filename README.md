@@ -38,3 +38,6 @@ However, this can be solved by setting the `ServiceKind.Synchronized` as is show
 Normally, one would suggest, that setting this kind globally using the `IRequestExecutorBuilder.RegisterDbContext` method would solve this problem globally. This is not the case!
 
 ![Architecture Diagram](diagrams/architecture.png)
+
+As you can see, `GetBooksAsync` injects the `BookService` which is not Synchronized because only the DbContext is synchronized. Two simultaneous calls to the books resolver lead to the same exception.
+But `GetBookById` directly injects the `DbContext` which is defined globally as Synchronized so it doesn't throw the same exception.

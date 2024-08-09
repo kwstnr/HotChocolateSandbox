@@ -1,6 +1,7 @@
 @startuml
 class BookQueries {
     Task<IEnumerable<Book>> GetBooksAsync(BookService)
+    IQueryable<Book> GetBookById(DbContext, Guid)
 }
 
 class BookService {
@@ -10,6 +11,7 @@ class BookService {
 
 class DbContext
 
-BookQueries ..|> BookService : calls
+BookQueries ..|> BookService : calls (Books)
+BookQueries ..|> DbContext : directly calls (BookById)
 BookService *-- DbContext
 @enduml
