@@ -1,6 +1,6 @@
-using HotChocolateSandbox.api.Data;
 using HotChocolateSandbox.api.Model;
 using Microsoft.EntityFrameworkCore;
+using HotChocolateSandboxDbContext = HotChocolateSandbox.AddPooledDbContext.Data.HotChocolateSandboxDbContext;
 
 namespace HotChocolateSandbox.AddPooledDbContext.Service;
 

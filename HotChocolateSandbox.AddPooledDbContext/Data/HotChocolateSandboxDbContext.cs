@@ -1,7 +1,7 @@
 using HotChocolateSandbox.api.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace HotChocolateSandbox.api.Data;
+namespace HotChocolateSandbox.AddPooledDbContext.Data;
 
 public class HotChocolateSandboxDbContext(DbContextOptions<HotChocolateSandboxDbContext> options) : DbContext(options)
 {

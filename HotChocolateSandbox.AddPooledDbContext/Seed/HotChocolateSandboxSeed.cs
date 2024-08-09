@@ -1,7 +1,7 @@
-using HotChocolateSandbox.api.Data;
 using HotChocolateSandbox.api.Model;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
+using HotChocolateSandboxDbContext = HotChocolateSandbox.AddPooledDbContext.Data.HotChocolateSandboxDbContext;
 
 namespace HotChocolateSandbox.AddPooledDbContext.Seed;
 
