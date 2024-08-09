@@ -19,3 +19,18 @@ Alternatively it can be defined per resolver using `[Service(ServiceKind.Synchro
 `builder.Services.AddDbContextPool<HotChocolateSandboxDbContext>(opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));`
 
 this creates a pool of DbContexts that are reused. When different GraphQL Resolvers inject a DbContext at the same time, different Instances of DbContexts are injected and execute operations.
+
+## AddDbContext
+`builder.Services.AddDbContext<HotChocolateSandboxDbContext>(o =>
+o.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));`
+
+this creates a scoped DbContext. When different GraphQL Resolvers inject a DbContext at the same time, the same instace of the DbContext is injected.
+
+### Limitations
+When two different resolvers access the DbContext at the same time, an exception is thrown.
+
+`A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.`
+
+this indicates that the DbContext is not thread safe!
+
+However, this can be solved by setting the `ServiceKind.Synchronized` as is shown in the `AuthorQueries`
