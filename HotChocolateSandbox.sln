@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_DevOps", "_DevOps", "{0F4B20FE-73E3-4C0B-B013-E2E56FFFB3BA}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
-		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolateSandbox.Data", "HotChocolateSandbox.Data\HotChocolateSandbox.Data.csproj", "{326B27E3-BF53-4A5E-9C1A-EB07F3BF01D4}"
@@ -14,6 +13,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolateSandbox.AddPooledDbContext", "HotChocolateSandbox.AddPooledDbContext\HotChocolateSandbox.AddPooledDbContext.csproj", "{1CF47534-963D-479F-899D-D93094950DFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolateSandbox.AddDbContext", "HotChocolateSandbox.AddDbContext\HotChocolateSandbox.AddDbContext.csproj", "{9E8DFD5D-DF16-4934-A379-F76C1C0E136D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docs", "_Docs", "{59E3A2CE-09B7-4D4E-A3EA-4604235AE1C1}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		diagrams\architecture.puml = diagrams\architecture.puml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

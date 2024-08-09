@@ -16,7 +16,8 @@ builder.Services
 
 builder.Services
     .AddGraphQLServer()
-    .AddTypes();
+    .AddTypes()
+    .RegisterDbContext<HotChocolateSandboxDbContext>(DbContextKind.Synchronized);
 
 var app = builder.Build();
 

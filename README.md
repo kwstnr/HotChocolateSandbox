@@ -34,3 +34,7 @@ When two different resolvers access the DbContext at the same time, an exception
 this indicates that the DbContext is not thread safe!
 
 However, this can be solved by setting the `ServiceKind.Synchronized` as is shown in the `AuthorQueries`
+
+Normally, one would suggest, that setting this kind globally using the `IRequestExecutorBuilder.RegisterDbContext` method would solve this problem globally. This is not the case!
+
+![Architecture Diagram](diagrams/architecture.png)

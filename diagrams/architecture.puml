@@ -1,0 +1,15 @@
+@startuml
+class BookQueries {
+    Task<IEnumerable<Book>> GetBooksAsync(BookService)
+}
+
+class BookService {
+    DbContext _context
+    Task<IEnumerable<Book>> GetBooksAsync()
+}
+
+class DbContext
+
+BookQueries ..|> BookService : calls
+BookService *-- DbContext
+@enduml
