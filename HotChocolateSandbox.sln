@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_DevOps", "_DevOps", "{0F4B20FE-73E3-4C0B-B013-E2E56FFFB3BA}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolateSandbox.api", "HotChocolateSandbox.api\HotChocolateSandbox.api.csproj", "{14851E34-7B69-488D-B20D-E434DA7C8AD3}"
