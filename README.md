@@ -1,7 +1,7 @@
 # Overview
 This project is a sandbox for testing out different ways to provide EFCore DbContexts when implementing a GraphQL API.
 
-The solution contains a central `HotChocolateSandbox.Data` class library which includes the EFCore model and the DbContext.
+The solution contains a central `HotChocolateSandbox.Data` class library which includes the EFCore model.
 Different Web-API's use this classlibrary to setup a GraphQL Server and provide the DbContext in different ways.
 
 References from the [ChilliCream Documentation](https://chillicream.com/docs/hotchocolate/v13/integrations/entity-framework) in regards to EntityFramework are used.
