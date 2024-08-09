@@ -7,17 +7,10 @@ namespace HotChocolateSandbox.AddPooledDbContext.Service.TrackingIssues;
 public class ChangeBookTitleService(HotChocolateSandboxDbContext context)
 {
 
-    public async Task ChangeBookTitle(Guid bookId, string newTitle)
+    public Book ChangeBookTitle(Book book, string newTitle)
     {
-        var book = await context.Books.FirstOrDefaultAsync(b => b.Id == bookId);
-        if (book != null)
-        {
-            book.Title = newTitle;
-        }
-    }
-
-    public async Task SaveChangesAsync()
-    {
-        await context.SaveChangesAsync();
+        book.Title = newTitle;
+        context.Update(book);
+        return book;
     }
 }
