@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace HotChocolateSandbox.api.Migrations
+namespace HotChocolateSandbox.AddPooledDbContext.Migrations
 {
     /// <inheritdoc />
     public partial class Init : Migration

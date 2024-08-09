@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace HotChocolateSandbox.api.Data;
+namespace HotChocolateSandbox.AddPooledDbContext.Seed;
 
 public static class MigrateDbContextExtensions
 {

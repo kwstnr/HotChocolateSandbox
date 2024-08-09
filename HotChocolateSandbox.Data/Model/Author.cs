@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace HotChocolateSandbox.api.Model;
+namespace HotChocolateSandbox.Data.Model;
 
 public sealed class Author
 {

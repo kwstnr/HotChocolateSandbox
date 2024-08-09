@@ -1,8 +1,8 @@
-using HotChocolateSandbox.api.Data;
-using HotChocolateSandbox.api.Model;
+using HotChocolateSandbox.Data.Model;
 using Microsoft.EntityFrameworkCore;
+using HotChocolateSandboxDbContext = HotChocolateSandbox.AddPooledDbContext.Data.HotChocolateSandboxDbContext;
 
-namespace HotChocolateSandbox.api.Service;
+namespace HotChocolateSandbox.AddPooledDbContext.Service;
 
 public class AuthorService(HotChocolateSandboxDbContext context)
 {
