@@ -1,7 +1,7 @@
+using HotChocolateSandbox.AddPooledDbContext.Service;
 using HotChocolateSandbox.api.Model;
-using HotChocolateSandbox.api.Service;
 
-namespace HotChocolateSandbox.api.Types.Query;
+namespace HotChocolateSandbox.AddPooledDbContext.Types.Query;
 
 [QueryType]
 public static class BookQueries

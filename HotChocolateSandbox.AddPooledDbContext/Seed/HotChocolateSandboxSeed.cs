@@ -1,8 +1,9 @@
+using HotChocolateSandbox.api.Data;
 using HotChocolateSandbox.api.Model;
 using Microsoft.EntityFrameworkCore;
 using Npgsql;
 
-namespace HotChocolateSandbox.api.Data;
+namespace HotChocolateSandbox.AddPooledDbContext.Seed;
 
 public class HotChocolateSandboxSeed: IDbSeeder<HotChocolateSandboxDbContext>
 {

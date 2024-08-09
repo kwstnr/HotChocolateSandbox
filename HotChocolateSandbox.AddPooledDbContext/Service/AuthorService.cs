@@ -2,7 +2,7 @@ using HotChocolateSandbox.api.Data;
 using HotChocolateSandbox.api.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace HotChocolateSandbox.api.Service;
+namespace HotChocolateSandbox.AddPooledDbContext.Service;
 
 public class AuthorService(HotChocolateSandboxDbContext context)
 {

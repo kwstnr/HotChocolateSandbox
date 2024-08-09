@@ -1,5 +1,6 @@
+using HotChocolateSandbox.AddPooledDbContext.Seed;
+using HotChocolateSandbox.AddPooledDbContext.Service;
 using HotChocolateSandbox.api.Data;
-using HotChocolateSandbox.api.Service;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
