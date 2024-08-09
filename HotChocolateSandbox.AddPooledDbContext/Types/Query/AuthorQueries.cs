@@ -1,5 +1,5 @@
 using HotChocolateSandbox.AddPooledDbContext.Service;
-using HotChocolateSandbox.api.Model;
+using HotChocolateSandbox.Data.Model;
 
 namespace HotChocolateSandbox.AddPooledDbContext.Types.Query;
 

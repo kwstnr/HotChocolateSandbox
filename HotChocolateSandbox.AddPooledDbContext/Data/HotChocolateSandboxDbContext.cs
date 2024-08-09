@@ -1,4 +1,4 @@
-using HotChocolateSandbox.api.Model;
+using HotChocolateSandbox.Data.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotChocolateSandbox.AddPooledDbContext.Data;
