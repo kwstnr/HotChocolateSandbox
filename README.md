@@ -20,6 +20,9 @@ Alternatively it can be defined per resolver using `[Service(ServiceKind.Synchro
 
 this creates a pool of DbContexts that are reused. When different GraphQL Resolvers inject a DbContext at the same time, different Instances of DbContexts are injected and execute operations.
 
+### Limitations
+A problem arises (what we have seen in our projects) is when different services track the same entities within different Instances of the same DbContext.
+
 ## AddDbContext
 `builder.Services.AddDbContext<HotChocolateSandboxDbContext>(o =>
 o.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));`
