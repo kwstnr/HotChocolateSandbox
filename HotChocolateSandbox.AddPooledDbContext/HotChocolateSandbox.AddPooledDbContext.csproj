@@ -20,4 +20,12 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HotChocolateSandbox.Data\HotChocolateSandbox.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Seeding\" />
+    </ItemGroup>
+
 </Project>
