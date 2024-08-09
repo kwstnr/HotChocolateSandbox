@@ -1,3 +1,5 @@
+# Disclaimer
+**This project contains a lot of messy code, as I'm trying to reproduce different behaviors in different projects**
 # Overview
 This project is a sandbox for testing out different ways to provide EFCore DbContexts when implementing a GraphQL API.
 
