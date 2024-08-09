@@ -39,5 +39,6 @@ Normally, one would suggest, that setting this kind globally using the `IRequest
 
 ![Architecture Diagram](diagrams/architecture.png)
 
-As you can see, `GetBooksAsync` injects the `BookService` which is not Synchronized because only the DbContext is synchronized. Two simultaneous calls to the books resolver lead to the same exception.
+As you can see, `GetBooksAsync` injects the `BookService` which is not Synchronized because only the DbContext is synchronized. Two simultaneous calls to the books resolver lead to the same exception. If the Service is injected in a Synchronized matter, the issues stop. You can try this out by changing the `Service` Decorator of the `Books2` resolver in the `BookQueries` class.
+
 But `GetBookById` directly injects the `DbContext` which is defined globally as Synchronized so it doesn't throw the same exception.

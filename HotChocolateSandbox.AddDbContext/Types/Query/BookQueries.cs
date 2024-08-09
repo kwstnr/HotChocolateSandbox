@@ -1,7 +1,6 @@
 using HotChocolateSandbox.AddDbContext.Data;
 using HotChocolateSandbox.AddDbContext.Service;
 using HotChocolateSandbox.Data.Model;
-using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace HotChocolateSandbox.AddDbContext.Types.Query;
 
@@ -9,6 +8,10 @@ namespace HotChocolateSandbox.AddDbContext.Types.Query;
 public static class BookQueries
 {
     public static async Task<IEnumerable<Book>> GetBooksAsync([Service] BookService bookService)
+        => await bookService.GetBooksAsync();
+
+    public static async Task<IEnumerable<Book>> GetBooks2Async(
+        [Service(ServiceKind.Synchronized)] BookService bookService)
         => await bookService.GetBooksAsync();
     
     [UseFirstOrDefault]
