@@ -16,4 +16,7 @@ public class BookService(IDbContextFactory<HotChocolateSandboxDbContext> context
     
     public async Task<Book?> GetBookByIdAsync(Guid id)
         => await Context.Books.FirstOrDefaultAsync(b => b.Id == id);
+    
+    public async Task<Book?> GetBookByIdWithAuthorAsync(Guid id)
+        => await Context.Books.Include(b => b.Author).FirstOrDefaultAsync(b => b.Id == id);
 }

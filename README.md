@@ -63,3 +63,5 @@ this creates a factory for DbContexts. When a service needs a `DbContext`, it sh
 disposing of DbContexts is not handled by the factory. This can lead to memory leaks if not handled properly.
 
 also tracking of the same entities by different DbContexts -> hasn't been reproduced yet.
+
+I tried to reproduce the exception within the `UpdateBook` mutation. The exception wasn't thrown but the error is visible. -> the book is updated on the db but returning the new book using a different dbContext doesn't include the updates.

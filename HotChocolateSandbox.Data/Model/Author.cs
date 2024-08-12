@@ -6,7 +6,7 @@ public sealed class Author
 {
     [Key]
     public Guid Id { get; init; }
-    public string Name { get; private set; }
+    public string Name { get; set; }
     public ICollection<Book> Books { get; set; }
     
     private Author()

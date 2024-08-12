@@ -14,8 +14,8 @@ builder.Services.AddMigration<HotChocolateSandboxDbContext, HotChocolateSandboxS
 builder.Services
     .AddScoped<BookService>()
     .AddScoped<AuthorService>()
-    .AddScoped<ChangeBookAuthorService>()
-    .AddScoped<ChangeBookTitleService>();
+    .AddScoped<UpdateAuthorNameService>()
+    .AddScoped<UpdateBookTitleService>();
 
 builder.Services
     .AddGraphQLServer()
