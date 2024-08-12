@@ -6,8 +6,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// builder.Services.AddDbContext<HotChocolateSandboxDbContext>(o =>
-//     o.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));
 builder.Services.AddDbContextFactory<HotChocolateSandboxDbContext>(o =>
     o.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));
 

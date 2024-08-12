@@ -52,3 +52,14 @@ The same Service can be registered as Synchronous though, by calling the `Regist
 `GetBookById` works with only a global DbContext Registration because it directly injects the `DbContext` which is defined globally as Synchronized so it doesn't throw the same exception.
 
 Try out these scenarios by commenting out the `Books2` Resolver and the global service registration in and out.
+
+## DbContextFactory
+`builder.Services.AddDbContextFactory<HotChocolateSandboxDbContext>(o =>
+o.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));`
+
+this creates a factory for DbContexts. When a service needs a `DbContext`, it should inject the `IDbContextFactory<HotChocolateSandboxDbContext>` and create a new instance of the `DbContext` using the `CreateDbContext` method.
+
+### Limitations
+disposing of DbContexts is not handled by the factory. This can lead to memory leaks if not handled properly.
+
+also tracking of the same entities by different DbContexts -> hasn't been reproduced yet.
