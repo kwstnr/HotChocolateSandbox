@@ -50,7 +50,7 @@ Funnily enough, if you add the same service once in a synchronized matter, all o
 The same Service can be registered as Synchronous though, by calling the `RegisterService` function on the `IRequestExecutorBuilder`.
 
 `GetBookById` works with only a global DbContext Registration because it directly injects the `DbContext` which is defined globally as Synchronized so it doesn't throw the same exception.
-
+ 
 Try out these scenarios by commenting out the `Books2` Resolver and the global service registration in and out.
 
 ## DbContextFactory

@@ -1,6 +1,5 @@
-using HotChocolateSandbox.AddDbContext.Data;
-using HotChocolateSandbox.AddDbContext.Seed;
-using HotChocolateSandbox.AddDbContext.Service;
+using HotChocolate.v14Test.Data;
+using HotChocolate.v14Test.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,17 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<HotChocolateSandboxDbContext>(o =>
     o.UseNpgsql(builder.Configuration.GetConnectionString("CatalogDB")));
 
-builder.Services.AddMigration<HotChocolateSandboxDbContext, HotChocolateSandboxSeed>();
-
 builder.Services
-    .AddScoped<BookService>()
     .AddScoped<AuthorService>();
 
 builder.Services
     .AddGraphQLServer()
     .AddTypes();
-    // .RegisterDbContext<HotChocolateSandboxDbContext>(DbContextKind.Synchronized);
-    // .RegisterService<BookService>(ServiceKind.Synchronized);
 
 var app = builder.Build();
 
